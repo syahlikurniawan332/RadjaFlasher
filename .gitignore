@@ -1,0 +1,32 @@
+.env
+.env.*
+!.env.example
+
+/vendor/
+/node_modules/
+
+/storage/logs/*
+!/storage/logs/.gitignore
+
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+
+/public/hot
+
+# Python / scraper
+/lingkungan1/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local / temporary
+*.zip
+*.rar
+*.log

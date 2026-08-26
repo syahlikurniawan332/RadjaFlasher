@@ -1,35 +1,81 @@
-@props(['items' => [
-['label' => 'Home', 'url' => route('home'), 'icon' => '🏠', 'route' => 'home'],
-['label' => 'Services', 'url' => route('services'), 'icon' => '🔧', 'route' => 'services'],
-['label' => 'Gallery', 'url' => route('gallery'), 'icon' => '📷', 'route' => 'gallery'],
-['label' => 'Article', 'url' => route('article'), 'icon' => '📝', 'route' => 'article']
-]])
+@props([
+    'items' => [
+        [
+            'label' => 'Beranda',
+            'url' => route('home'),
+            'route' => 'home',
+        ],
+        [
+            'label' => 'Layanan',
+            'url' => route('services'),
+            'route' => 'services',
+        ],
+        [
+            'label' => 'Galeri',
+            'url' => route('gallery'),
+            'route' => 'gallery',
+        ],
+        [
+            'label' => 'Artikel',
+            'url' => route('article'),
+            'route' => 'article',
+        ],
+    ],
+])
 
 <div
     id="mobile-navigation"
     x-show="mobileMenuOpen"
     x-cloak
+    x-transition:enter="transition ease-out duration-200"
+    x-transition:enter-start="opacity-0 -translate-y-2"
+    x-transition:enter-end="opacity-100 translate-y-0"
+    x-transition:leave="transition ease-in duration-150"
+    x-transition:leave-start="opacity-100 translate-y-0"
+    x-transition:leave-end="opacity-0 -translate-y-2"
     @click.outside="mobileMenuOpen = false"
-    class="lg:hidden border-t bg-white">
-    <div class="flex flex-col px-4 py-4 space-y-3">
-        @foreach($items as $item)
-        @php
-        $isActive = isset($item['route'])
-        && $item['route'] === Route::currentRouteName();
-        @endphp
-        <a href="{{ $item['url'] }}" class="nav-link {{ $isActive ? 'bg-gray-800 text-white font-bold underline' : '' }} w-full text-left px-4 py-3 rounded-lg hover:bg-red-50 hover:text-red-700 transition font-medium text-gray-700">
-            <div class="flex items-center gap-3">
-                <span class="text-lg">{{ $item['icon'] }}</span>
+    class="border-t border-gray-100 bg-white lg:hidden"
+>
+    <div class="container mx-auto space-y-1 px-4 py-4">
+        @foreach ($items as $item)
+            @php
+                $isActive =
+                    isset($item['route']) &&
+                    request()->routeIs($item['route']);
+            @endphp
+
+            <a
+                href="{{ $item['url'] }}"
+                @click="mobileMenuOpen = false"
+                @if ($isActive) aria-current="page" @endif
+                class="
+                    flex items-center justify-between rounded-xl
+                    px-4 py-3 text-sm font-medium transition-colors
+
+                    {{ $isActive
+                        ? 'bg-red-50 text-red-700'
+                        : 'text-gray-700 hover:bg-gray-50 hover:text-red-700'
+                    }}
+                "
+            >
                 <span>{{ $item['label'] }}</span>
-            </div>
-        </a>
+
+                <span
+                    class="{{ $isActive ? 'text-red-600' : 'text-gray-300' }}"
+                    aria-hidden="true"
+                >
+                    →
+                </span>
+            </a>
         @endforeach
 
-        <div class="border-t my-2"></div>
-
-        <x-buttons.whatsapp class="w-full"> 
-            Konsultasi via WhatsApp
-        </x-buttons.whatsapp>
-        <x-buttons.call class="w-full mt-2" />
+        <div class="pt-3">
+            <x-buttons.whatsapp
+                size="md"
+                class="w-full justify-center bg-red-600 hover:bg-red-700"
+            >
+                Konsultasi via WhatsApp
+            </x-buttons.whatsapp>
+        </div>
     </div>
 </div>

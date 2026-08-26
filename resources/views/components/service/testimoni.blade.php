@@ -28,10 +28,12 @@
             <div class="text-center pt-4 mt-3">
                 <div class="inline-flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-full mb-3">
                     <span class="h-2 w-2 bg-red-500 rounded-full"></span>
-                    <span class="text-sm font-medium text-gray-700">Gallery Aktif</span>
+                    <span class="text-sm font-medium text-gray-700">
+                        Dokumentasi Servis
+                    </span>
                 </div>
                 <p class="text-gray-600">
-                    📸 {{ count($items) }} foto dokumentasi proses servis
+                    {{ count($items) }} foto dokumentasi tersedia
                 </p>
             </div>
         </div>

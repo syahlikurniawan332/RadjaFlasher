@@ -18,7 +18,7 @@
                     Layanan <span class="bg-linear-to-r from-red-500 to-red-600 bg-clip-text text-transparent">Perbaikan</span>
                 </h1>
 
-                <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                <p class="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
                     Lihat dokumentasi perbaikan Android & iPhone serta konsultasikan kendala perangkat sebelum servis.
                 </p>
 
@@ -79,7 +79,7 @@
             @endswitch
 
             <!-- CTA Section -->
-            <div class="text-center bg-linear-to-r from-blue-50 to-cyan-50 rounded-2xl p-10 border border-blue-100">
+            <div class="text-center bg-linear-to-r from-red-50 to-orange-50 rounded-2xl p-10 border border-red-100">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">Butuh Pemeriksaan untuk Kendala HP?</h2>
                 <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
                     Ceritakan gejala perangkat melalui WhatsApp atau kunjungi workshop untuk konsultasi awal.
@@ -109,8 +109,13 @@
                     <span class="h-2 w-2 bg-green-200 rounded-full animate-pulse"></span>
                     <span class="text-sm font-semibold">CARA KAMI BEKERJA</span>
                 </div>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Perbaikan yang Terukur & Transparan</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Setiap perangkat ditangani dengan proses standar untuk memastikan hasil maksimal dan aman.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                    Proses Pemeriksaan & Perbaikan
+                </h2>
+
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Setiap perangkat melalui tahap pemeriksaan, konsultasi, penanganan sesuai hasil diagnosa, dan pengecekan sebelum diserahkan kembali.
+                </p>
             </div>
 
             <!-- Process Steps -->
@@ -120,22 +125,22 @@
                     <div class="text-center">
                         <div class="h-16 w-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center text-2xl text-blue-600 mb-4">1</div>
                         <h4 class="font-bold text-gray-900 mb-2">Diagnosa</h4>
-                        <p class="text-sm text-gray-600">Cek kerusakan secara detail</p>
+                        <p class="text-sm text-gray-600">Pemeriksaan awal untuk mengidentifikasi kendala</p>
                     </div>
                     <div class="text-center">
                         <div class="h-16 w-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center text-2xl text-blue-600 mb-4">2</div>
                         <h4 class="font-bold text-gray-900 mb-2">Konsultasi</h4>
-                        <p class="text-sm text-gray-600">Diskusikan solusi & biaya</p>
+                        <p class="text-sm text-gray-600">Diskusi opsi penanganan dan estimasi biaya</p>
                     </div>
                     <div class="text-center">
                         <div class="h-16 w-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center text-2xl text-blue-600 mb-4">3</div>
                         <h4 class="font-bold text-gray-900 mb-2">Perbaikan</h4>
-                        <p class="text-sm text-gray-600">Dikerjakan sesuai hasil diagnosa</p>
+                        <p class="text-sm text-gray-600">Penanganan dilakukan sesuai hasil pemeriksaan</p>
                     </div>
                     <div class="text-center">
                         <div class="h-16 w-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center text-2xl text-blue-600 mb-4">4</div>
                         <h4 class="font-bold text-gray-900 mb-2">Testing</h4>
-                        <p class="text-sm text-gray-600">Quality check sebelum serah terima</p>
+                        <p class="text-sm text-gray-600">Pengecekan fungsi sebelum perangkat diserahkan</p>
                     </div>
                 </div>
             </div>
@@ -153,7 +158,9 @@
                         <p id="modalCategory" class="text-sm text-gray-600 mt-1"></p>
                     </div>
                     <button
+                        type="button"
                         onclick="closeComparisonModal()"
+                        aria-label="Tutup detail perbaikan"
                         class="text-gray-400 hover:text-gray-600 p-2 hover:bg-gray-100 rounded-lg">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
@@ -168,7 +175,7 @@
                         <div class="h-64 bg-gray-200 rounded-xl overflow-hidden">
                             <img
                                 id="modalBeforeImage"
-                                alt="Before Repair"
+                                alt="Kondisi perangkat sebelum perbaikan"
                                 class="w-full h-full object-cover">
                         </div>
                         <div class="mt-3">
@@ -181,7 +188,7 @@
                         <div class="h-64 bg-gray-200 rounded-xl overflow-hidden">
                             <img
                                 id="modalAfterImage"
-                                alt="After Repair"
+                                alt="Kondisi perangkat setelah perbaikan"
                                 class="w-full h-full object-cover">
                         </div>
                         <div class="mt-3">
@@ -199,7 +206,7 @@
 
                 <!-- Tags -->
                 <div class="mb-6">
-                    <h3 class="text-lg font-bold text-gray-900 mb-3">Jenis Kerusakan yang Ditangani</h3>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Kategori Kendala</h3>
                     <div id="modalTags" class="flex flex-wrap gap-2"></div>
                 </div>
 

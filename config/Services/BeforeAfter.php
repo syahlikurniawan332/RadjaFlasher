@@ -1,97 +1,95 @@
 <?php
 
 return [
-
     'items' => [
         [
             'id' => 1,
-            'title' => 'poco x3',
-            'description' => 'Hp poco x3 mengalamai mati total dan ternyata kendala ada pada cpu & ram',
+            'title' => 'POCO X3',
+            'description' => 'Perangkat mengalami mati total. Setelah pemeriksaan, kendala teridentifikasi pada area CPU dan RAM.',
             'before' => [
                 'image' => 'images/service/before1.webp',
-                'title' => 'black screen mati total',
-                'description' => 'Layar hitam tidak ada respon, tidak bisa diapa-apain',
+                'title' => 'Perangkat Mati Total',
+                'description' => 'Layar tidak menampilkan respons dan perangkat tidak dapat dinyalakan.',
             ],
             'after' => [
                 'image' => 'images/service/after1.webp',
-                'title' => 'hp nyala normal',
-                'description' => 'Setelah diperbaiki, hp bisa nyala normal kembali',
+                'title' => 'Perangkat Kembali Menyala',
+                'description' => 'Setelah proses perbaikan, perangkat dapat menyala dan digunakan kembali.',
             ],
-            'tags' => ['android', 'poco', 'black screen'],
+            'tags' => ['Android', 'POCO', 'Mati Total'],
             'date' => '15 Jan 2024',
         ],
 
         [
             'id' => 2,
-            'title' => 'vivo y16',
-            'description' => 'Hp vivo y16 mengalami mati total dan harus mengganti emmc',
+            'title' => 'Vivo Y16',
+            'description' => 'Perangkat mengalami mati total. Hasil pemeriksaan menunjukkan kendala pada komponen penyimpanan eMMC.',
             'before' => [
                 'image' => 'images/service/before2.webp',
-                'title' => 'HP Black Screen',
-                'description' => 'HP tidak bisa nyala, layar hitam tidak ada respon',
+                'title' => 'Perangkat Tidak Menyala',
+                'description' => 'Perangkat tidak memberikan respons saat dicoba untuk dinyalakan.',
             ],
             'after' => [
                 'image' => 'images/service/after2.webp',
-                'title' => 'Normal Berfungsi',
-                'description' => 'Setelah ganti emmc, hp bisa nyala dan berfungsi normal kembali',
+                'title' => 'Perangkat Berfungsi Kembali',
+                'description' => 'Setelah penanganan pada komponen terkait, perangkat dapat kembali menyala dan digunakan.',
             ],
-            'tags' => ['android', 'vivo', 'black screen'],
+            'tags' => ['Android', 'Vivo', 'Mati Total'],
             'date' => '20 Jan 2024',
         ],
 
         [
             'id' => 3,
-            'title' => 'Samsung A54',
-            'description' => 'Hp Samsung A54 mengalami mati total dan perbaikan ic cpu untuk mengatasi masalah tersebut',
+            'title' => 'Samsung Galaxy A54',
+            'description' => 'Perangkat mengalami mati total dan dilakukan pemeriksaan serta penanganan pada area IC dan CPU.',
             'before' => [
                 'image' => 'images/service/before3.webp',
-                'title' => 'black screen mati total',
-                'description' => 'Layar hitam tidak ada respon, tidak bisa diapa-apain',
+                'title' => 'Perangkat Mati Total',
+                'description' => 'Perangkat tidak memberikan respons dan layar tetap dalam kondisi mati.',
             ],
             'after' => [
                 'image' => 'images/service/after3.webp',
-                'title' => 'hp nyala normal',
-                'description' => 'Setelah diperbaiki, hp bisa nyala normal kembali',
+                'title' => 'Perangkat Kembali Menyala',
+                'description' => 'Setelah proses penanganan, perangkat dapat kembali menyala dan digunakan.',
             ],
-            'tags' => ['android', 'samsung', 'black screen'],
+            'tags' => ['Android', 'Samsung', 'Mati Total'],
             'date' => '25 Jan 2024',
         ],
 
         [
             'id' => 4,
             'title' => 'Vivo Y27E',
-            'description' => 'Hp mengalami masalah pada koneksi wifi',
+            'description' => 'Perangkat mengalami kendala pada koneksi Wi-Fi sehingga jaringan tidak dapat terdeteksi atau tersambung.',
             'before' => [
                 'image' => 'images/service/before4.webp',
-                'title' => 'wifi tidak bisa konek',
-                'description' => 'Wifi tidak bisa mendeteksi jaringan dan tidak bisa konek',
+                'title' => 'Wi-Fi Tidak Terhubung',
+                'description' => 'Perangkat mengalami kesulitan mendeteksi dan terhubung ke jaringan Wi-Fi.',
             ],
             'after' => [
                 'image' => 'images/service/after4.webp',
-                'title' => 'wifi bisa konek normal',
-                'description' => 'Setelah diperbaiki, wifi bisa mendeteksi jaringan dan konek normal kembali',
+                'title' => 'Koneksi Wi-Fi Kembali Normal',
+                'description' => 'Setelah penanganan, perangkat dapat kembali mendeteksi dan terhubung ke jaringan Wi-Fi.',
             ],
-            'tags' => ['android', 'wifi', 'repair', 'connection'],
+            'tags' => ['Android', 'Vivo', 'Wi-Fi'],
             'date' => '10 Jan 2024',
         ],
 
         [
             'id' => 5,
-            'title' => 'Samsung A02S',
-            'description' => 'Hp mengalami masalah pada koneksi Jaringan',
+            'title' => 'Samsung Galaxy A02s',
+            'description' => 'Perangkat mengalami kendala pada koneksi jaringan sehingga akses internet tidak dapat digunakan sebagaimana mestinya.',
             'before' => [
                 'image' => 'images/service/before5.webp',
-                'title' => 'Jaringan Terputus',
-                'description' => 'Jaringan Putus dan terblokir tidak bisa konek internet',
+                'title' => 'Koneksi Jaringan Bermasalah',
+                'description' => 'Perangkat mengalami gangguan koneksi dan tidak dapat menggunakan jaringan internet.',
             ],
             'after' => [
                 'image' => 'images/service/after5.webp',
-                'title' => 'Jaringan Normal Kembali',
-                'description' => 'Setelah diperbaiki, jaringan bisa konek internet normal kembali',
+                'title' => 'Koneksi Kembali Berfungsi',
+                'description' => 'Setelah proses penanganan, perangkat dapat kembali terhubung ke jaringan.',
             ],
-            'tags' => ['android', 'wifi', 'repair', 'connection'],
+            'tags' => ['Android', 'Samsung', 'Jaringan'],
             'date' => '10 Jan 2024',
         ],
-
     ],
 ];

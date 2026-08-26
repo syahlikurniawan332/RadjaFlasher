@@ -117,21 +117,6 @@
             <p class="text-gray-500">Artikel sedang dalam persiapan. Nantikan artikel terbaru kami!</p>
         </div>
         @endif
-
-        <!-- Newsletter CTA -->
-        <div class="mt-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl p-8 text-center text-white">
-            <h3 class="text-2xl font-bold mb-3">Ingin Tips Terbaru?</h3>
-            <p class="mb-6 opacity-90">Dapatkan artikel dan tips perawatan HP langsung ke email Anda.</p>
-            <div class="max-w-md mx-auto flex gap-3">
-                <input 
-                    type="email" 
-                    placeholder="Email Anda" 
-                    class="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-500">
-                <button class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
-                    Subscribe
-                </button>
-            </div>
-        </div>
     </div>
 
     <!-- Article Detail Modal -->

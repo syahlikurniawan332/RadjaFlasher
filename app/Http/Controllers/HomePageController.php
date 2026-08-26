@@ -49,7 +49,7 @@ class HomePageController extends Controller
         switch ($type) {
 
             case 'testimonials':
-                $items = $testimoniService->all();
+                $items = array_slice($testimoniService->all(), 0, 6);
                 break;
 
             case 'before-after':

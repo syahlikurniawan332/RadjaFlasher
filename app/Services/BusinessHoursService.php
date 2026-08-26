@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Services;
+
 use Carbon\Carbon;
 
 class BusinessHoursService
@@ -18,10 +19,11 @@ class BusinessHoursService
 
         [$open, $close] = $hours[$dayKey];
 
-        $openTime  = Carbon::createFromTimeString($open);
-        $closeTime = Carbon::createFromTimeString($close);
+        $openTime = $now->copy()->setTimeFromTimeString($open);
+        $closeTime = $now->copy()->setTimeFromTimeString($close);
 
-        return $now->between($openTime, $closeTime);
+        return $now->greaterThanOrEqualTo($openTime)
+            && $now->lessThan($closeTime);
     }
 
     public function todayHours(): array

@@ -2,8 +2,8 @@
 
 return [
     'name' => 'Radja Flasher',
-    'phone' => '082285248855',
-    'phone_label' => '0822-8524-8855',
+    'phone' => '082293564225',
+    'phone_label' => '0822-9356-4225',
     'whatsapp' => '6282293564225',
     'message_template' => 'Halo Radja Flasher, saya ingin konsultasi perbaikan HP.',
     'city' => 'Air Jamban, Kec. Mandau, Kabupaten Bengkalis, Riau 28983',
